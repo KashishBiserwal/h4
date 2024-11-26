@@ -168,6 +168,17 @@ const courseItems = [
   },
 ];
 
+const gamesItems = [
+  {
+    title: "TYPING.COM",
+    link: "https://search.app?link=https%3A%2F%2Fwww.typing.com%2Fstudent%2Fgame%2Fztype&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
+  },
+  {
+    title: "MONKEY TYPE",
+    link: "https://search.app?link=https%3A%2F%2Fmonkeytype.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
+  },
+]
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -269,6 +280,53 @@ function CourseMenu() {
 }
 
 
+function GamesMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const renderItems = gamesItems.map(({ title, link }) => (
+    <a  href={link} key={title}>
+      <MenuItem className="hover:bg-[#fe4c1c] hover:text-white">
+        <Typography variant="small" className="mb-1">
+          {title}
+        </Typography>
+      </MenuItem>
+    </a>
+  ));
+
+  return (
+    <React.Fragment>
+      <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
+        <MenuHandler>
+          <Typography as="a" href="#" variant="small" className="font-normal">
+            <MenuItem className="hidden text-xs items-center gap-2 font-semibold hover:bg-[#510bdb] hover:text-white lg:flex lg:rounded-full">
+              GAMES{" "}
+              <ChevronDownIcon
+                strokeWidth={2}
+                color="gray"
+                className={`h-3 w-3 transition-transform ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </MenuItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden w-[18rem] overflow-visible lg:grid">
+          <ul className="flex w-full flex-col gap-1 bg-[#510bdb] text-white">
+            {renderItems}
+          </ul>
+        </MenuList>
+      </Menu>
+      {/* <MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden">
+        <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
+        Pages{" "}
+      </MenuItem>
+      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
+        {renderItems}
+      </ul> */}
+    </React.Fragment>
+  );
+}
+
 // nav list component
 const navListItems = [
   {
@@ -276,11 +334,11 @@ const navListItems = [
     icon: UserCircleIcon,
     link: "/tests",
   },
-  {
-    label: "TYPING GAME",
-    icon: CubeTransparentIcon,
-    link: "https://search.app?link=https%3A%2F%2Fmonkeytype.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
-  },
+  // {
+  //   label: "TYPING GAME",
+  //   icon: CubeTransparentIcon,
+  //   link: "https://search.app?link=https%3A%2F%2Fmonkeytype.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
+  // },
   // {
   //   label: "SAMPLE PAPERS",
   //   icon: CodeBracketSquareIcon,
@@ -310,6 +368,7 @@ function NavList() {
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavListMenu />
       <CourseMenu />
+      <GamesMenu />
       {navListItems.map(({ label, icon, link }, key) => (
         <Typography
           key={label}
@@ -323,6 +382,8 @@ function NavList() {
             {/* {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "} */}
             <span className="font-semibold text-xs"> {label}</span>
           </MenuItem>
+          {/* <CourseMenu />
+          <GamesMenu /> */}
         </Typography>
       ))}
     </ul>
