@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../css/Tests.css'
-import { ComplexNavbar } from '../Navbar';
 
 export default function Tests() {
     const [tests, setTests] = React.useState(null);
@@ -25,7 +24,6 @@ export default function Tests() {
     console.log(sortedTests, 'sortedTests');
     return (
         <div>
-             <ComplexNavbar />
             <h1 className='text-center font-bold text-3xl mt-3'>Test Links</h1>
             <div className='class-test'>
                 {

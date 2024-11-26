@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import './css/Layout.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
+import { ComplexNavbar } from './Navbar';
 
 const Layout = () => {
     const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Layout = () => {
 
     return (
         <div className='full'>
+            <ComplexNavbar />
             <div className="body">
                 <Outlet />
             </div>
@@ -28,7 +30,7 @@ const Layout = () => {
                     <br />
                     <div class="contact-form">
                         <div id="form">
-                            <form action="https://formspree.io/f/mrgwvapb" method="POST">
+                            <form action="https://formspree.io/f/xqakyazn" method="POST">
                                 <div class="input">
                                     <label>Name </label>
                                     <input type="text" name=" name " autoComplete='off' />
@@ -53,7 +55,7 @@ const Layout = () => {
                                 </div>
                                 <br />
 
-                                <button type="submit" className="button">Submit</button>
+                                <button type="submit" className="button bg-white text-black p-3 rounded-lg">Submit</button>
                             </form>
                         </div>
 
@@ -90,7 +92,7 @@ const Layout = () => {
                     </div>
                 </section>
             </div>
-            <footer>
+            <footer id='footer'>
                 <div>
                     <p>H4STUDY © 2024</p>
                     {/* <br></br> */}

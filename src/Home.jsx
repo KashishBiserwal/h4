@@ -7,7 +7,6 @@ import { Button } from "@material-tailwind/react";
 export default function Home() {
   return (
     <>
-      <ComplexNavbar />
       <Hero />
       <TiwariAcademySection />
       <div className="bg-white py-6 mb-20">

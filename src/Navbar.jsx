@@ -114,8 +114,6 @@ function ProfileMenu() {
 const ncertSolItems = [
   {
     title: "Study Material for Nursery",
-    description:
-      "Download PDFs and other study material.",
   },
   {
     title: "Study Material for KG",
@@ -132,35 +130,42 @@ const ncertSolItems = [
   {
     title: "Study Material for 4",
   },
+  {
+    title: "Study Material for 5",
+  },
+  {
+    title: "Study Material for 6",
+  },
+  {
+    title: "Study Material for 7",
+  },
+  {
+    title: "Study Material for 8",
+  },
+  {
+    title: "Study Material for 9",
+  },
+  {
+    title: "Study Material for 10",
+  },
 ];
 
-const grammarItems = [
+const courseItems = [
   {
-    title: "Class 1 English Grammar",
+    title: "JNB",
   },
   {
-    title: "Class 2 English Grammar",
+    title: "SANIK SCHOOL",
   },
   {
-    title: "Class 3 English Grammar",
+    title: "CHS",
   },
   {
-    title: "Class 4 English Grammar",
-  },
-];
-const samplePaper = [
-  {
-    title: "CBSE Sample Papers for Class 9",
+    title: "NMS",
   },
   {
-    title: "CBSE Sample Papers for Class 10",
+    title: "OLYMPIAD",
   },
-  {
-    title: "CBSE Sample Papers for Class 11",
-  },
-  {
-    title: "CBSE Sample Papers for Class 12",
-  }
 ];
 
 function NavListMenu() {
@@ -213,31 +218,90 @@ function NavListMenu() {
   );
 }
 
+function CourseMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const renderItems = courseItems.map(({ title, description }) => (
+    <a href="#" key={title}>
+      <MenuItem className="hover:bg-[#fe4c1c] hover:text-white">
+        <Typography variant="small" className="mb-1">
+          {title}
+        </Typography>
+        <Typography variant="small" >
+          {description}
+        </Typography>
+      </MenuItem>
+    </a>
+  ));
+
+  return (
+    <React.Fragment>
+      <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
+        <MenuHandler>
+          <Typography as="a" href="#" variant="small" className="font-normal">
+            <MenuItem className="hidden text-xs items-center gap-2 font-semibold hover:bg-[#510bdb] hover:text-white lg:flex lg:rounded-full">
+              COURSES{" "}
+              <ChevronDownIcon
+                strokeWidth={2}
+                color="gray"
+                className={`h-3 w-3 transition-transform ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </MenuItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden w-[18rem] overflow-visible lg:grid">
+          <ul className="flex w-full flex-col gap-1 bg-[#510bdb] text-white">
+            {renderItems}
+          </ul>
+        </MenuList>
+      </Menu>
+      {/* <MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden">
+        <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
+        Pages{" "}
+      </MenuItem>
+      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
+        {renderItems}
+      </ul> */}
+    </React.Fragment>
+  );
+}
+
+
 // nav list component
 const navListItems = [
   {
-    label: "ONLINE TESTS",
+    label: "ONLINE WORKSHEET",
     icon: UserCircleIcon,
+    link: "/tests",
   },
   {
-    label: "GRAMMAR",
+    label: "TYPING GAME",
     icon: CubeTransparentIcon,
+    link: "https://search.app?link=https%3A%2F%2Fmonkeytype.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
   },
+  // {
+  //   label: "SAMPLE PAPERS",
+  //   icon: CodeBracketSquareIcon,
+  // },
+  // {
+  //   label: "NCERT BOOKS",
+  //   icon: CodeBracketSquareIcon,
+  // },
+  // {
+  //   label: "SYLLABUS",
+  //   icon: CodeBracketSquareIcon,
+  // },
+  // {
+  //   label: "CONTACT US",
+  //   icon: CodeBracketSquareIcon,
+  //   link: "/contact",
+  // },
   {
-    label: "SAMPLE PAPERS",
+    label: "GALLERY",
     icon: CodeBracketSquareIcon,
-  },
-  {
-    label: "NCERT BOOKS",
-    icon: CodeBracketSquareIcon,
-  },
-  {
-    label: "SYLLABUS",
-    icon: CodeBracketSquareIcon,
-  },
-  {
-    label: "CONTACT",
-    icon: CodeBracketSquareIcon,
+    link: "/gallery",
   },
 ];
 
@@ -245,11 +309,12 @@ function NavList() {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavListMenu />
-      {navListItems.map(({ label, icon }, key) => (
+      <CourseMenu />
+      {navListItems.map(({ label, icon, link }, key) => (
         <Typography
           key={label}
           as="a"
-          href="tests"
+          href={link}
           variant="small"
           color="gray"
           className="font-medium "
