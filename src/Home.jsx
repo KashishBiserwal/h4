@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Hero />
       <TiwariAcademySection />
-      <section id="class" className="mx-12 mt-12">
+      <section id="class" className="mx-8 mt-12">
         <h2 className="font-bold text-3xl text-center mb-8">Class</h2>
         <div className="grid gap-8 grid-cols-2 md:grid-cols-3">
           <a href="#">

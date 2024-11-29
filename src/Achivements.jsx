@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Achivements() {
   return (
-    <div className="bg-gray-800 rounded-ss-[50px] rounded-br-[50px]  my-12 mx-12 py-6  text-white">
+    <div className="bg-gray-800 rounded-ss-[50px] rounded-br-[50px]  my-12 mx-8 py-6  text-white">
       <div className="max-w-6xl mx-auto text-center">
         {/* Subtitle */}
         <p className="text-sm  uppercase font-medium"># Guaranteed Success</p>
