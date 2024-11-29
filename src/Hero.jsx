@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-gray-50 z-10 mt-6 sm:mt-24 ">
+    <div className="bg-gray-50 z-10 mt-6 sm:mt-12 ">
       <div className="p-4 sm:ml-20 grid sm:flex justify-around">
         <header className="py-8">
           <h1 className="text-3xl md:text-4xl font-bold text-purple-700">
@@ -15,10 +15,10 @@ const Hero = () => {
             FOR CLASS NURSERY-12 SESSION 2024-25
           </p>
         </header>
-        <img src="images/hero.svg" alt="" className=" w-full sm:w-1/2" />
+        <img src="images/hero.svg" alt="" className=" w-full sm:w-1/2 sm:-mt-8" />
       </div>
 
-      <div className="bg-gray-200 text-sm shadow-md justify-center rounded-md p-6 mt-8 sm:mt-20 w-full px-4 sm:px-6 md:px-[200px]">
+      <div className="bg-gray-200 text-sm shadow-md justify-center rounded-md p-6 mt-8 sm:mt-12 w-full px-4 sm:px-6 md:px-[200px]">
         <form className="flex flex-col sm:flex-row gap-4 md:gap-6 flex-wrap">
           <select
             className="flex-grow p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 w-full sm:w-auto px-4"
