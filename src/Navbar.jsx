@@ -408,7 +408,7 @@ export function ComplexNavbar() {
         <Typography
           as="a"
           href="/"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-bold text-2xl text-[#510bdb] lg:mr-0 lg:ml-0"
+          className="mr-4 ml-2 cursor-pointer py-1.5 font-bold text-2xl text-purple-700 lg:mr-0 lg:ml-0"
         >
           <span className="text-[#fe4c1c]">H4</span>STUDY
         </Typography>

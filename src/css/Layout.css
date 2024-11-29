@@ -1,8 +1,7 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
-
 
 .bar {
   width: 30px;
@@ -12,7 +11,6 @@ body{
   transition: 0.4s;
 }
 
-
 footer {
   background-color: black;
   color: white;
@@ -20,7 +18,6 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-
 
 .contact-logo {
   display: flex;
@@ -77,16 +74,16 @@ form {
 }
 
 label {
-  flex: 1; 
-  color: #fff; 
+  flex: 1;
+  color: #fff;
 }
 
 input {
-  flex: 3; 
+  flex: 3;
   background-color: transparent;
-  border: 2px solid #fff; 
+  border: 2px solid #fff;
   padding: 10px;
-  color: #fff; 
+  color: #fff;
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -94,7 +91,7 @@ input {
 }
 input:focus {
   outline: none;
-  border-color: #ff6600; 
+  border-color: #ff6600;
 }
 .input {
   display: flex;
@@ -106,29 +103,35 @@ input:focus {
   place-content: center;
 }
 
-
 #details {
-  flex: 1; 
+  flex: 1;
   padding: 20px;
   max-width: 400px;
 }
 
 #details h3 {
-  color: white; 
+  color: white;
 }
 
 #details p {
-  color: #fff; 
+  color: #fff;
 }
 
-.contact-container{
+.contact-container {
   width: 100%;
   background-color: #6070e2;
-  margin-top: 50px;
 }
 
-@media (max-width: 500px){
-  #contact{
+@media (max-width: 500px) {
+  #contact {
     padding: 20px;
   }
+}
+
+.section-1 {
+  background: url(images/banner.png) no-repeat;
+  background-size: 800px;
+  background-position: top center;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
