@@ -27,89 +27,89 @@ import {
 } from "@heroicons/react/24/solid";
 
 // profile menu component
-const profileMenuItems = [
-  {
-    label: "My Profile",
-    icon: UserCircleIcon,
-  },
-  {
-    label: "Edit Profile",
-    icon: Cog6ToothIcon,
-  },
-  {
-    label: "Inbox",
-    icon: InboxArrowDownIcon,
-  },
-  {
-    label: "Help",
-    icon: LifebuoyIcon,
-  },
-  {
-    label: "Sign Out",
-    icon: PowerIcon,
-  },
-];
+// const profileMenuItems = [
+//   {
+//     label: "My Profile",
+//     icon: UserCircleIcon,
+//   },
+//   {
+//     label: "Edit Profile",
+//     icon: Cog6ToothIcon,
+//   },
+//   {
+//     label: "Inbox",
+//     icon: InboxArrowDownIcon,
+//   },
+//   {
+//     label: "Help",
+//     icon: LifebuoyIcon,
+//   },
+//   {
+//     label: "Sign Out",
+//     icon: PowerIcon,
+//   },
+// ];
 
-function ProfileMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+// function ProfileMenu() {
+//   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const closeMenu = () => setIsMenuOpen(false);
+//   const closeMenu = () => setIsMenuOpen(false);
 
-  return (
-    <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
-      <MenuHandler>
-        <Button
-          variant="text"
-          color="blue-gray"
-          className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
-        >
-          <Avatar
-            variant="circular"
-            size="sm"
-            alt="tania andrew"
-            className="border border-gray-900 p-0.5"
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-          />
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3 w-3 transition-transform ${
-              isMenuOpen ? "rotate-180" : ""
-            }`}
-          />
-        </Button>
-      </MenuHandler>
-      <MenuList className="p-1">
-        {profileMenuItems.map(({ label, icon }, key) => {
-          const isLastItem = key === profileMenuItems.length - 1;
-          return (
-            <MenuItem
-              key={label}
-              onClick={closeMenu}
-              className={`flex items-center gap-2 rounded ${
-                isLastItem
-                  ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
-                  : ""
-              }`}
-            >
-              {React.createElement(icon, {
-                className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
-                strokeWidth: 2,
-              })}
-              <Typography
-                as="span"
-                variant="small"
-                className="font-normal"
-                color={isLastItem ? "red" : "inherit"}
-              >
-                {label}
-              </Typography>
-            </MenuItem>
-          );
-        })}
-      </MenuList>
-    </Menu>
-  );
-}
+//   return (
+//     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
+//       <MenuHandler>
+//         <Button
+//           variant="text"
+//           color="blue-gray"
+//           className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
+//         >
+//           <Avatar
+//             variant="circular"
+//             size="sm"
+//             alt="tania andrew"
+//             className="border border-gray-900 p-0.5"
+//             src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+//           />
+//           <ChevronDownIcon
+//             strokeWidth={2.5}
+//             className={`h-3 w-3 transition-transform ${
+//               isMenuOpen ? "rotate-180" : ""
+//             }`}
+//           />
+//         </Button>
+//       </MenuHandler>
+//       <MenuList className="p-1">
+//         {profileMenuItems.map(({ label, icon }, key) => {
+//           const isLastItem = key === profileMenuItems.length - 1;
+//           return (
+//             <MenuItem
+//               key={label}
+//               onClick={closeMenu}
+//               className={`flex items-center gap-2 rounded ${
+//                 isLastItem
+//                   ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
+//                   : ""
+//               }`}
+//             >
+//               {React.createElement(icon, {
+//                 className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
+//                 strokeWidth: 2,
+//               })}
+//               <Typography
+//                 as="span"
+//                 variant="small"
+//                 className="font-normal"
+//                 color={isLastItem ? "red" : "inherit"}
+//               >
+//                 {label}
+//               </Typography>
+//             </MenuItem>
+//           );
+//         })}
+//       </MenuList>
+//     </Menu>
+//   );
+// }
 
 const ncertSolItems = [
   {
@@ -119,54 +119,94 @@ const ncertSolItems = [
     title: "Study Material for KG",
   },
   {
-    title: "Study Material for 1",
+    title: "NCERT Solution for class 1",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 2",
+    title: "NCERT Solution for class 2",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 3",
+    title: "NCERT Solution for class 3",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 4",
+    title: "NCERT Solution for class 4",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 5",
+    title: "NCERT Solution for class 5",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 6",
+    title: "NCERT Solution for class 6",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 7",
+    title: "NCERT Solution for class 7",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 8",
+    title: "NCERT Solution for class 8",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 9",
+    title: "NCERT Solution for class 9",
+    subjects: ["Hindi", "English", "Math"],
   },
   {
-    title: "Study Material for 10",
+    title: "NCERT Solution for class 10",
+    subjects: ["Hindi", "English", "Math"],
   },
 ];
 
 const courseItems = [
   {
+    title: "JNVST",
+  },
+  {
     title: "JNB",
   },
   {
-    title: "SANIK SCHOOL",
+    title: "SANIK SCHOOL (AISSEE)",
   },
   {
     title: "CHS",
   },
   {
-    title: "NMS",
+    title: "RMS",
+  },
+  {
+    title: "NMMS Scholarship",
   },
   {
     title: "OLYMPIAD",
   },
 ];
+const bookItems = [
+  {
+    title: "JNVST",
+  },
+  {
+    title: "JNB",
+  },
+  {
+    title: "SANIK SCHOOL (AISSEE)",
+  },
+  {
+    title: "CHS",
+  },
+  {
+    title: "RMS",
+  },
+  {
+    title: "NMMS Scholarship",
+  },
+  {
+    title: "OLYMPIAD",
+  },
+];
+
 
 const gamesItems = [
   {
@@ -179,10 +219,90 @@ const gamesItems = [
   },
 ]
 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [openClass, setOpenClass] = React.useState(null); // Track open dropdown for a specific class
 
-  const renderItems = ncertSolItems.map(({ title, description }) => (
+  const handleClassToggle = (classTitle) => {
+    setOpenClass(openClass === classTitle ? null : classTitle);
+  };
+
+  const renderItems = ncertSolItems.map(({ title, subjects }) => (
+    <li key={title} className="relative group">
+      <MenuItem
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          if (subjects) handleClassToggle(title);
+        }}
+        className="flex items-center justify-between hover:bg-[#fe4c1c] hover:text-white p-2 rounded"
+      >
+        <Typography variant="small" className="mb-1">
+          {title}
+        </Typography>
+        {subjects && (
+          <ChevronDownIcon
+            strokeWidth={2}
+            color="gray"
+            className={`h-3 w-3 transition-transform ${
+              openClass === title ? "rotate-180" : ""
+            }`}
+          />
+        )}
+      </MenuItem>
+      {subjects && openClass === title && (
+        <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-40 mt-0 rounded shadow-lg z-10">
+          {subjects.map((subject) => (
+            <li key={subject}>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-[#fe4c1c] hover:text-white"
+              >
+                {subject}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  ));
+
+  return (
+    <React.Fragment>
+      <div
+        className="relative"
+        onMouseLeave={() => {
+          setIsMenuOpen(false);
+          setOpenClass(null);
+        }}
+      >
+        <Typography
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="font-semibold cursor-pointer p-2 text-xs flex items-center gap-2 hover:bg-[#510bdb] hover:text-white lg:rounded-full"
+        >
+          NCERT SOLUTIONS
+          <ChevronDownIcon
+            strokeWidth={2}
+            color="gray"
+            className={`h-3 w-3 transition-transform ${
+              isMenuOpen ? "rotate-180" : ""
+            }`}
+          />
+        </Typography>
+        {isMenuOpen && (
+          <ul className="absolute w-[18rem] bg-[#510bdb] text-white rounded shadow-lg z-20 mt-2 text-sm">
+            {renderItems}
+          </ul>
+        )}
+      </div>
+    </React.Fragment>
+  );
+}
+function CourseMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const renderItems = courseItems.map(({ title, description }) => (
     <a href="#" key={title}>
       <MenuItem className="hover:bg-[#fe4c1c] hover:text-white">
         <Typography variant="small" className="mb-1">
@@ -201,7 +321,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem className="hidden text-xs items-center gap-2 font-semibold hover:bg-[#510bdb] hover:text-white lg:flex lg:rounded-full">
-              NCERT SOLUTIONS{" "}
+              COURSES{" "}
               <ChevronDownIcon
                 strokeWidth={2}
                 color="gray"
@@ -228,11 +348,10 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
-
-function CourseMenu() {
+function BooksMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const renderItems = courseItems.map(({ title, description }) => (
+  const renderItems = bookItems.map(({ title, description }) => (
     <a href="#" key={title}>
       <MenuItem className="hover:bg-[#fe4c1c] hover:text-white">
         <Typography variant="small" className="mb-1">
@@ -251,7 +370,7 @@ function CourseMenu() {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem className="hidden text-xs items-center gap-2 font-semibold hover:bg-[#510bdb] hover:text-white lg:flex lg:rounded-full">
-              COURSES{" "}
+              BOOKS{" "}
               <ChevronDownIcon
                 strokeWidth={2}
                 color="gray"
@@ -368,6 +487,7 @@ function NavList() {
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavListMenu />
       <CourseMenu />
+      <BooksMenu />
       <GamesMenu />
       {navListItems.map(({ label, icon, link }, key) => (
         <Typography

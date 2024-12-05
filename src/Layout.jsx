@@ -64,6 +64,19 @@ const Layout = () => {
               </form>
             </div>
 
+            <div id="quick-links">
+              <h3 className="font-bold text-2xl">Quick Links</h3>
+              <br />
+              <div className="grid leading-10">
+                <a href="/tests">Online Test</a>
+                <a href="#">Syllabus</a>
+                <a href="#">Sample paper</a>
+                <a href="#">Syllabus</a>
+                <a href="#">NCERT Solution</a>
+                <a href="#">Question Paper</a>
+              </div>
+            </div>
+
             <div id="details">
               <h3 className="font-bold text-2xl">Contact Info</h3>
               <br />
@@ -80,16 +93,6 @@ const Layout = () => {
                     <a href="mailto:h4study@gmail.com">h4study@gmail.com</a>
                   </p>
                 </div>
-                {/* <div class="contact-logo">
-                                    <img src="images/instagram.png" alt="" />
-                                    <p>
-                                        <a
-                                            href="https://www.instagram.com/aadrshgupta6/"
-                                            target="_blank" rel="noreferrer"
-                                        >aadrshgupta6</a
-                                        >
-                                    </p>
-                                </div> */}
                 <div className="contact-logo">
                   <img src="images/placeholder.png" alt="" />
                   <p>vatika kunj bhondsi Gurugram (122102)</p>

@@ -1,13 +1,29 @@
 import React from "react";
-import { ComplexNavbar } from "./Navbar";
 import Hero from "./Hero";
 import TiwariAcademySection from "./TiwariAcademySection";
-import { Button } from "@material-tailwind/react";
 import Achivements from "./Achivements";
 
 export default function Home() {
   return (
     <>
+      <div id="marquee" className="p-2 text-sm font-semibold text-gray-700 uppercase -z-10">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+          <span style={{ marginRight: "200px" }}>
+            Education is the most powerful Weapon Which You Can Use To Change
+            the World
+          </span>
+          <span style={{ marginRight: "200px" }}>
+            Here is Learning Adda 24 x 7
+          </span>
+          <span style={{ marginRight: "200px" }}>
+            Education is the most powerful Weapon Which You Can Use To Change
+            the World
+          </span>
+          <span style={{ marginRight: "200px" }}>
+            Here is Learning Adda 24 x 7
+          </span>
+        </marquee>
+      </div>
       <Hero />
       <TiwariAcademySection />
       <section id="class" className="mx-8 mt-12">
