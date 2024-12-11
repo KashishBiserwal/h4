@@ -25,6 +25,7 @@ import {
   RocketLaunchIcon,
   Bars2Icon,
 } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router-dom";
 
 // profile menu component
 // const profileMenuItems = [
@@ -111,6 +112,100 @@ import {
 //   );
 // }
 
+const mcqItems = [
+  {
+    title: "MCQs for class 1",
+    subjects: [
+      "MCQs for class 1 Hindi",
+      "MCQs for class 1 English",
+      "MCQs for class 1 Math",
+    ],
+  },
+  {
+    title: "MCQs for class 2",
+    subjects: [
+      "MCQs for class 2 Hindi",
+      "MCQs for class 2 English",
+      "MCQs for class 2 Math",
+    ],
+  },
+  {
+    title: "MCQs for class 3",
+    subjects: [
+      "MCQs for class 3 Hindi",
+      "MCQs for class 3 English",
+      "MCQs for class 3 Math",
+    ],
+  },
+  {
+    title: "MCQs for class 4",
+    subjects: [
+      "MCQs for class 4 Hindi",
+      "MCQs for class 4 English",
+      "MCQs for class 4 Math",
+    ],
+  },
+  {
+    title: "MCQs for class 5",
+    subjects: [
+      "MCQs for class 5 Hindi",
+      "MCQs for class 5 English",
+      "MCQs for class 5 Math",
+      "MCQs for class 5 Science",
+      "MCQs for class 5 SSt",
+    ],
+  },
+  {
+    title: "MCQs for class 6",
+    subjects: [
+      "MCQs for class 6 Hindi",
+      "MCQs for class 6 English",
+      "MCQs for class 6 Math",
+      "MCQs for class 6 Science",
+      "MCQs for class 6 SSt",
+    ],
+  },
+  {
+    title: "MCQs for class 7",
+    subjects: [
+      "MCQs for class 7 Hindi",
+      "MCQs for class 7 English",
+      "MCQs for class 7 Math",
+      "MCQs for class 7 Science",
+      "MCQs for class 7 SSt",
+    ],
+  },
+  {
+    title: "MCQs for class 8",
+    subjects: [
+      "MCQs for class 8 Hindi",
+      "MCQs for class 8 English",
+      "MCQs for class 8 Math",
+      "MCQs for class 8 Science",
+      "MCQs for class 8 SSt",
+    ],
+  },
+  {
+    title: "MCQs for class 9",
+    subjects: [
+      "MCQs for class 9 Hindi",
+      "MCQs for class 9 English",
+      "MCQs for class 9 Math",
+      "MCQs for class 9 Science",
+      "MCQs for class 9 SSt",
+    ],
+  },
+  {
+    title: "MCQs for class 10",
+    subjects: [
+      "MCQs for class 10 Hindi",
+      "MCQs for class 10 English",
+      "MCQs for class 10 Math",
+      "MCQs for class 10 Science",
+      "MCQs for class 10 SSt",
+    ],
+  },
+];
 const ncertSolItems = [
   {
     title: "Study Material for Nursery",
@@ -120,43 +215,95 @@ const ncertSolItems = [
   },
   {
     title: "NCERT Solution for class 1",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 1 Hindi",
+      "NCERT Solution for class 1 English",
+      "NCERT Solution for class 1 Math",
+    ],
   },
   {
     title: "NCERT Solution for class 2",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 2 Hindi",
+      "NCERT Solution for class 2 English",
+      "NCERT Solution for class 2 Math",
+    ],
   },
   {
     title: "NCERT Solution for class 3",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 3 Hindi",
+      "NCERT Solution for class 3 English",
+      "NCERT Solution for class 3 Math",
+    ],
   },
   {
     title: "NCERT Solution for class 4",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 4 Hindi",
+      "NCERT Solution for class 4 English",
+      "NCERT Solution for class 4 Math",
+    ],
   },
   {
     title: "NCERT Solution for class 5",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 5 Hindi",
+      "NCERT Solution for class 5 English",
+      "NCERT Solution for class 5 Math",
+      "NCERT Solution for class 5 Science",
+      "NCERT Solution for class 5 SSt",
+    ],
   },
   {
     title: "NCERT Solution for class 6",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 6 Hindi",
+      "NCERT Solution for class 6 English",
+      "NCERT Solution for class 6 Math",
+      "NCERT Solution for class 6 Science",
+      "NCERT Solution for class 6 SSt",
+    ],
   },
   {
     title: "NCERT Solution for class 7",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 7 Hindi",
+      "NCERT Solution for class 7 English",
+      "NCERT Solution for class 7 Math",
+      "NCERT Solution for class 7 Science",
+      "NCERT Solution for class 7 SSt",
+    ],
   },
   {
     title: "NCERT Solution for class 8",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 8 Hindi",
+      "NCERT Solution for class 8 English",
+      "NCERT Solution for class 8 Math",
+      "NCERT Solution for class 8 Science",
+      "NCERT Solution for class 8 SSt",
+    ],
   },
   {
     title: "NCERT Solution for class 9",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 9 Hindi",
+      "NCERT Solution for class 9 English",
+      "NCERT Solution for class 9 Math",
+      "NCERT Solution for class 9 Science",
+      "NCERT Solution for class 9 SSt",
+    ],
   },
   {
     title: "NCERT Solution for class 10",
-    subjects: ["Hindi", "English", "Math"],
+    subjects: [
+      "NCERT Solution for class 10 Hindi",
+      "NCERT Solution for class 10 English",
+      "NCERT Solution for class 10 Math",
+      "NCERT Solution for class 10 Science",
+      "NCERT Solution for class 10 SSt",
+    ],
   },
 ];
 
@@ -207,30 +354,41 @@ const bookItems = [
   },
 ];
 
-
 const gamesItems = [
   {
     title: "TYPING.COM",
-    link: "https://search.app?link=https%3A%2F%2Fwww.typing.com%2Fstudent%2Fgame%2Fztype&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
+    link: "https://search.app?link=https%3A%2F%2Fwww.typing.com%2Fstudent%2Fgame%2Fztype&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4",
   },
   {
     title: "MONKEY TYPE",
-    link: "https://search.app?link=https%3A%2F%2Fmonkeytype.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4"
+    link: "https://search.app?link=https%3A%2F%2Fmonkeytype.com%2F&utm_campaign=aga&utm_source=agsadl2%2Csh%2Fx%2Fgs%2Fm2%2F4",
   },
-]
-
+];
 
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [openClass, setOpenClass] = React.useState(null); // Track open dropdown for a specific class
+  const [openClass, setOpenClass] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleClassToggle = (classTitle) => {
     setOpenClass(openClass === classTitle ? null : classTitle);
   };
 
+  const handleSubjectClick = (classTitle, subject) => {
+    const formattedClass = classTitle
+      .toLowerCase()
+      .replace("ncert solution for class ", "")
+      .trim();
+    const formattedSubject = subject
+      .toLowerCase()
+      .replace(/ncert solution for class \d+ /, "")
+      .trim();
+    navigate(`/ncert/${formattedClass}/${formattedSubject}`);
+  };
+
   const renderItems = ncertSolItems.map(({ title, subjects }) => (
     <li key={title} className="relative group">
-      <MenuItem
+      <a
         href="#"
         onClick={(e) => {
           e.preventDefault();
@@ -250,13 +408,14 @@ function NavListMenu() {
             }`}
           />
         )}
-      </MenuItem>
+      </a>
       {subjects && openClass === title && (
-        <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-40 mt-0 rounded shadow-lg z-10">
+        <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-[18rem] mt-0 rounded shadow-lg z-10">
           {subjects.map((subject) => (
             <li key={subject}>
               <a
                 href="#"
+                onClick={() => handleSubjectClick(title, subject)}
                 className="block px-4 py-2 hover:bg-[#fe4c1c] hover:text-white"
               >
                 {subject}
@@ -269,36 +428,127 @@ function NavListMenu() {
   ));
 
   return (
-    <React.Fragment>
-      <div
-        className="relative"
-        onMouseLeave={() => {
-          setIsMenuOpen(false);
-          setOpenClass(null);
-        }}
+    <div
+      className="relative"
+      onMouseLeave={() => {
+        setIsMenuOpen(false);
+        setOpenClass(null);
+      }}
+    >
+      <Typography
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="font-semibold cursor-pointer p-2 text-xs flex items-center gap-2 hover:bg-[#510bdb] hover:text-white lg:rounded-full"
       >
-        <Typography
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="font-semibold cursor-pointer p-2 text-xs flex items-center gap-2 hover:bg-[#510bdb] hover:text-white lg:rounded-full"
-        >
-          NCERT SOLUTIONS
+        NCERT SOLUTIONS
+        <ChevronDownIcon
+          strokeWidth={2}
+          color="gray"
+          className={`h-3 w-3 transition-transform ${
+            isMenuOpen ? "rotate-180" : ""
+          }`}
+        />
+      </Typography>
+      {isMenuOpen && (
+        <ul className="absolute w-[18rem] bg-[#510bdb] text-white rounded shadow-lg z-20 mt-1 text-sm">
+          {renderItems}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function McqListMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [openClass, setOpenClass] = React.useState(null);
+  const navigate = useNavigate();
+
+  const handleClassToggle = (classTitle) => {
+    setOpenClass(openClass === classTitle ? null : classTitle);
+  };
+
+  const handleSubjectClick = (classTitle, subject) => {
+    const formattedClass = classTitle
+      .toLowerCase()
+      .replace("ncert solution for class ", "")
+      .trim();
+    const formattedSubject = subject
+      .toLowerCase()
+      .replace(/ncert solution for class \d+ /, "")
+      .trim();
+    // navigate(`/ncert/${formattedClass}/${formattedSubject}`);
+  };
+
+  const renderItems = mcqItems.map(({ title, subjects }) => (
+    <li key={title} className="relative group">
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          if (subjects) handleClassToggle(title);
+        }}
+        className="flex items-center justify-between hover:bg-[#fe4c1c] hover:text-white p-2 rounded"
+      >
+        <Typography variant="small" className="mb-1">
+          {title}
+        </Typography>
+        {subjects && (
           <ChevronDownIcon
             strokeWidth={2}
             color="gray"
             className={`h-3 w-3 transition-transform ${
-              isMenuOpen ? "rotate-180" : ""
+              openClass === title ? "rotate-180" : ""
             }`}
           />
-        </Typography>
-        {isMenuOpen && (
-          <ul className="absolute w-[18rem] bg-[#510bdb] text-white rounded shadow-lg z-20 mt-2 text-sm">
-            {renderItems}
-          </ul>
         )}
-      </div>
-    </React.Fragment>
+      </a>
+      {subjects && openClass === title && (
+        <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-[18rem] mt-0 rounded shadow-lg z-10">
+          {subjects.map((subject) => (
+            <li key={subject}>
+              <a
+                href="#"
+                onClick={() => handleSubjectClick(title, subject)}
+                className="block px-4 py-2 hover:bg-[#fe4c1c] hover:text-white"
+              >
+                {subject}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  ));
+
+  return (
+    <div
+      className="relative"
+      onMouseLeave={() => {
+        setIsMenuOpen(false);
+        setOpenClass(null);
+      }}
+    >
+      <Typography
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="font-semibold cursor-pointer p-2 text-xs flex items-center gap-2 hover:bg-[#510bdb] hover:text-white lg:rounded-full"
+      >
+        MCQs
+        <ChevronDownIcon
+          strokeWidth={2}
+          color="gray"
+          className={`h-3 w-3 transition-transform ${
+            isMenuOpen ? "rotate-180" : ""
+          }`}
+        />
+      </Typography>
+      {isMenuOpen && (
+        <ul className="absolute w-[18rem] bg-[#510bdb] text-white rounded shadow-lg z-20 mt-1 text-sm">
+          {renderItems}
+        </ul>
+      )}
+    </div>
   );
 }
+
 function CourseMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -308,9 +558,7 @@ function CourseMenu() {
         <Typography variant="small" className="mb-1">
           {title}
         </Typography>
-        <Typography variant="small" >
-          {description}
-        </Typography>
+        <Typography variant="small">{description}</Typography>
       </MenuItem>
     </a>
   ));
@@ -357,9 +605,7 @@ function BooksMenu() {
         <Typography variant="small" className="mb-1">
           {title}
         </Typography>
-        <Typography variant="small" >
-          {description}
-        </Typography>
+        <Typography variant="small">{description}</Typography>
       </MenuItem>
     </a>
   ));
@@ -398,12 +644,11 @@ function BooksMenu() {
   );
 }
 
-
 function GamesMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const renderItems = gamesItems.map(({ title, link }) => (
-    <a  href={link} key={title}>
+    <a href={link} key={title}>
       <MenuItem className="hover:bg-[#fe4c1c] hover:text-white">
         <Typography variant="small" className="mb-1">
           {title}
@@ -485,6 +730,7 @@ const navListItems = [
 function NavList() {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+      <McqListMenu />
       <NavListMenu />
       <CourseMenu />
       <BooksMenu />

@@ -2,10 +2,15 @@ import React from 'react'
 
 export default function Gallery() {
     const images = [
-      "/images/1.jpg",
       "/images/2.jpg",
-      "/images/3.jpg",
       "/images/4.jpg",
+      "/images/gal1.jpg",
+      "/images/3.jpg",
+      "/images/gal3.jpg",
+      "/images/1.jpg",
+      "/images/gal4.jpg",
+      "/images/gal5.jpg",
+      "/images/gal2.jpg",
     ];
   
     return (
