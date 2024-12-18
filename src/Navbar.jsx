@@ -116,96 +116,97 @@ const mcqItems = [
   {
     title: "MCQs for class 1",
     subjects: [
-      "MCQs for class 1 Hindi",
-      "MCQs for class 1 English",
-      "MCQs for class 1 Math",
+      { sub: "MCQs for class 1 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 1 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 1 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
     ],
   },
   {
     title: "MCQs for class 2",
     subjects: [
-      "MCQs for class 2 Hindi",
-      "MCQs for class 2 English",
-      "MCQs for class 2 Math",
+      { sub: "MCQs for class 2 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 2 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 2 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
     ],
   },
   {
     title: "MCQs for class 3",
     subjects: [
-      "MCQs for class 3 Hindi",
-      "MCQs for class 3 English",
-      "MCQs for class 3 Math",
+      { sub: "MCQs for class 3 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 3 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 3 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
     ],
   },
   {
     title: "MCQs for class 4",
     subjects: [
-      "MCQs for class 4 Hindi",
-      "MCQs for class 4 English",
-      "MCQs for class 4 Math",
+      { sub: "MCQs for class 4 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 4 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 4 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
     ],
   },
   {
     title: "MCQs for class 5",
     subjects: [
-      "MCQs for class 5 Hindi",
-      "MCQs for class 5 English",
-      "MCQs for class 5 Math",
-      "MCQs for class 5 Science",
-      "MCQs for class 5 SSt",
+      { sub: "MCQs for class 5 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 5 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 5 Math", chapters: ["Chapter 1 Large Numbers", "Chapter 2 Four Fundamental Operations", "Chapter 3 Factor and Multiple"] },
+      { sub: "MCQs for class 5 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
+      { sub: "MCQs for class 5 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
     ],
   },
   {
     title: "MCQs for class 6",
     subjects: [
-      "MCQs for class 6 Hindi",
-      "MCQs for class 6 English",
-      "MCQs for class 6 Math",
-      "MCQs for class 6 Science",
-      "MCQs for class 6 SSt",
+      { sub: "MCQs for class 6 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 6 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 6 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      { sub: "MCQs for class 6 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
+      { sub: "MCQs for class 6 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
     ],
   },
   {
     title: "MCQs for class 7",
     subjects: [
-      "MCQs for class 7 Hindi",
-      "MCQs for class 7 English",
-      "MCQs for class 7 Math",
-      "MCQs for class 7 Science",
-      "MCQs for class 7 SSt",
+      { sub: "MCQs for class 7 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 7 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 7 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      { sub: "MCQs for class 7 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
+      { sub: "MCQs for class 7 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
     ],
   },
   {
     title: "MCQs for class 8",
     subjects: [
-      "MCQs for class 8 Hindi",
-      "MCQs for class 8 English",
-      "MCQs for class 8 Math",
-      "MCQs for class 8 Science",
-      "MCQs for class 8 SSt",
+      { sub: "MCQs for class 8 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 8 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 8 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      { sub: "MCQs for class 8 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
+      { sub: "MCQs for class 8 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
     ],
   },
   {
     title: "MCQs for class 9",
     subjects: [
-      "MCQs for class 9 Hindi",
-      "MCQs for class 9 English",
-      "MCQs for class 9 Math",
-      "MCQs for class 9 Science",
-      "MCQs for class 9 SSt",
+      { sub: "MCQs for class 9 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 9 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 9 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      { sub: "MCQs for class 9 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
+      { sub: "MCQs for class 9 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
     ],
   },
   {
     title: "MCQs for class 10",
     subjects: [
-      "MCQs for class 10 Hindi",
-      "MCQs for class 10 English",
-      "MCQs for class 10 Math",
-      "MCQs for class 10 Science",
-      "MCQs for class 10 SSt",
+      { sub: "MCQs for class 10 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
+      { sub: "MCQs for class 10 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
+      { sub: "MCQs for class 10 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      { sub: "MCQs for class 10 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
+      { sub: "MCQs for class 10 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
     ],
   },
 ];
+
 const ncertSolItems = [
   {
     title: "Study Material for Nursery",
@@ -460,22 +461,23 @@ function NavListMenu() {
 function McqListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [openClass, setOpenClass] = React.useState(null);
+  const [openSubject, setOpenSubject] = React.useState(null); // Track the selected subject
+  const [chapters, setChapters] = React.useState([]); // Store chapters for the selected subject
   const navigate = useNavigate();
 
   const handleClassToggle = (classTitle) => {
     setOpenClass(openClass === classTitle ? null : classTitle);
+    setOpenSubject(null); // Reset subject and chapters when toggling class
+    setChapters([]);
   };
 
-  const handleSubjectClick = (classTitle, subject) => {
-    const formattedClass = classTitle
-      .toLowerCase()
-      .replace("ncert solution for class ", "")
-      .trim();
-    const formattedSubject = subject
-      .toLowerCase()
-      .replace(/ncert solution for class \d+ /, "")
-      .trim();
-    // navigate(`/ncert/${formattedClass}/${formattedSubject}`);
+  const handleSubjectToggle = (subject) => {
+    setOpenSubject(openSubject === subject ? null : subject); // Toggle the subject's dropdown
+    const selectedSubject = mcqItems
+      .find(item => item.title === openClass)
+      .subjects.find(item => item.sub === subject);
+
+    setChapters(selectedSubject ? selectedSubject.chapters : []); // Set chapters for the selected subject
   };
 
   const renderItems = mcqItems.map(({ title, subjects }) => (
@@ -495,23 +497,31 @@ function McqListMenu() {
           <ChevronDownIcon
             strokeWidth={2}
             color="gray"
-            className={`h-3 w-3 transition-transform ${
-              openClass === title ? "rotate-180" : ""
-            }`}
+            className={`h-3 w-3 transition-transform ${openClass === title ? "rotate-180" : ""}`}
           />
         )}
       </a>
       {subjects && openClass === title && (
         <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-[18rem] mt-0 rounded shadow-lg z-10">
-          {subjects.map((subject) => (
-            <li key={subject}>
+          {subjects.map(({ sub }) => (
+            <li key={sub}>
               <a
                 href="#"
-                onClick={() => handleSubjectClick(title, subject)}
+                onClick={() => handleSubjectToggle(sub)}
                 className="block px-4 py-2 hover:bg-[#fe4c1c] hover:text-white"
               >
-                {subject}
+                {sub}
               </a>
+              {/* Render chapters when a subject is selected */}
+              {openSubject === sub && (
+                <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-[18rem] mt-0 rounded shadow-lg z-10">
+                  {chapters.map(chapter => (
+                    <li key={chapter} className="px-4 py-2 hover:bg-[#fe4c1c] hover:text-white">
+                      {chapter}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -525,6 +535,8 @@ function McqListMenu() {
       onMouseLeave={() => {
         setIsMenuOpen(false);
         setOpenClass(null);
+        setOpenSubject(null);
+        setChapters([]);
       }}
     >
       <Typography
@@ -535,9 +547,7 @@ function McqListMenu() {
         <ChevronDownIcon
           strokeWidth={2}
           color="gray"
-          className={`h-3 w-3 transition-transform ${
-            isMenuOpen ? "rotate-180" : ""
-          }`}
+          className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
         />
       </Typography>
       {isMenuOpen && (
