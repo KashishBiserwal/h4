@@ -116,93 +116,296 @@ const mcqItems = [
   {
     title: "MCQs for class 1",
     subjects: [
-      { sub: "MCQs for class 1 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 1 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 1 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      {
+        sub: "MCQs for class 1 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 1 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 1 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
     ],
   },
   {
     title: "MCQs for class 2",
     subjects: [
-      { sub: "MCQs for class 2 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 2 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 2 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      {
+        sub: "MCQs for class 2 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 2 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 2 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
     ],
   },
   {
     title: "MCQs for class 3",
     subjects: [
-      { sub: "MCQs for class 3 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 3 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 3 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      {
+        sub: "MCQs for class 3 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 3 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 3 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
     ],
   },
   {
     title: "MCQs for class 4",
     subjects: [
-      { sub: "MCQs for class 4 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 4 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 4 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
+      {
+        sub: "MCQs for class 4 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 4 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 4 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
     ],
   },
   {
     title: "MCQs for class 5",
     subjects: [
-      { sub: "MCQs for class 5 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 5 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 5 Math", chapters: ["Chapter 1 Large Numbers", "Chapter 2 Four Fundamental Operations", "Chapter 3 Factor and Multiple"] },
-      { sub: "MCQs for class 5 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
-      { sub: "MCQs for class 5 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
+      {
+        sub: "MCQs for class 5 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 5 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 5 Math",
+        chapters: [
+          "Chapter 1 Large Numbers",
+          "Chapter 2 Four Fundamental Operations",
+          "Chapter 3 Factor and Multiple",
+        ],
+      },
+      {
+        sub: "MCQs for class 5 Science",
+        chapters: ["Chapter 1 Science", "Chapter 2 Science"],
+      },
+      {
+        sub: "MCQs for class 5 SSt",
+        chapters: ["Chapter 1 SSt", "Chapter 2 SSt"],
+      },
     ],
   },
   {
     title: "MCQs for class 6",
     subjects: [
-      { sub: "MCQs for class 6 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 6 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 6 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
-      { sub: "MCQs for class 6 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
-      { sub: "MCQs for class 6 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
+      {
+        sub: "MCQs for class 6 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 6 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 6 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
+      {
+        sub: "MCQs for class 6 Science",
+        chapters: ["Chapter 1 Science", "Chapter 2 Science"],
+      },
+      {
+        sub: "MCQs for class 6 SSt",
+        chapters: ["Chapter 1 SSt", "Chapter 2 SSt"],
+      },
     ],
   },
   {
     title: "MCQs for class 7",
     subjects: [
-      { sub: "MCQs for class 7 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 7 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 7 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
-      { sub: "MCQs for class 7 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
-      { sub: "MCQs for class 7 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
+      {
+        sub: "MCQs for class 7 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 7 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 7 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
+      {
+        sub: "MCQs for class 7 Science",
+        chapters: ["Chapter 1 Science", "Chapter 2 Science"],
+      },
+      {
+        sub: "MCQs for class 7 SSt",
+        chapters: ["Chapter 1 SSt", "Chapter 2 SSt"],
+      },
     ],
   },
   {
-    title: "MCQs for class 8",
+    title: "MCQs for Class 8",
     subjects: [
-      { sub: "MCQs for class 8 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 8 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 8 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
-      { sub: "MCQs for class 8 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
-      { sub: "MCQs for class 8 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
-    ],
-  },
+      {
+        sub: "MCQs for Class 8 Hindi",
+        chapters: [
+          "Chapter 1: ध्वनि",
+          "Chapter 2: लाख की चूड़ियां",
+          "Chapter 3: बस की यात्रा",
+          "Chapter 4: दीवानों की हस्ती",
+          "Chapter 5: चिट्ठियों की अनूठी दुनिया",
+          "Chapter 6: भगवान के डाकिए",
+          "Chapter 7: क्या निराश हुआ जाए",
+          "Chapter 8: यह सबसे कठिन समय नहीं",
+          "Chapter 9: कबीर की साखियाँ",
+          "Chapter 10: कामचोर"
+        ]
+      },
+      {
+        sub: "MCQs for Class 8 English",
+        chapters: [
+          "Chapter 1: The Best Christmas Present in the World",
+          "Chapter 2: The Tsunami",
+          "Chapter 3: Glimpses of the Past",
+          "Chapter 4: Bepin Choudhury’s Lapse of Memory",
+          "Chapter 5: The Summit Within",
+          "Chapter 6: This is Jody’s Fawn",
+          "Chapter 7: A Visit to Cambridge",
+          "Chapter 8: A Short Monsoon Diary",
+          "Chapter 9: The Great Stone Face I",
+          "Chapter 10: The Great Stone Face II"
+        ]
+      },
+      {
+        sub: "MCQs for Class 8 Math",
+        chapters: [
+          "Chapter 1: Rational Numbers",
+          "Chapter 2: Linear Equations in One Variable",
+          "Chapter 3: Understanding Quadrilaterals",
+          "Chapter 4: Practical Geometry",
+          "Chapter 5: Data Handling",
+          "Chapter 6: Squares and Square Roots",
+          "Chapter 7: Cubes and Cube Roots",
+          "Chapter 8: Comparing Quantities",
+          "Chapter 9: Algebraic Expressions and Identities",
+          "Chapter 10: Visualizing Solid Shapes",
+          "Chapter 11: Mensuration",
+          "Chapter 12: Exponents and Powers",
+          "Chapter 13: Direct and Inverse Proportions",
+          "Chapter 14: Factorization",
+          "Chapter 15: Introduction to Graphs",
+          "Chapter 16: Playing with Numbers"
+        ]
+      },
+      {
+        sub: "MCQs for Class 8 Science",
+        chapters: [
+          "Chapter 1: Crop Production and Management",
+          "Chapter 2: Microorganisms: Friend and Foe",
+          "Chapter 3: Synthetic Fibres and Plastics",
+          "Chapter 4: Materials: Metals and Non-Metals",
+          "Chapter 5: Coal and Petroleum",
+          "Chapter 6: Combustion and Flame",
+          "Chapter 7: Conservation of Plants and Animals",
+          "Chapter 8: Cell – Structure and Functions",
+          "Chapter 9: Reproduction in Animals",
+          "Chapter 10: Reaching the Age of Adolescence",
+          "Chapter 11: Force and Pressure",
+          "Chapter 12: Friction",
+          "Chapter 13: Sound",
+          "Chapter 14: Chemical Effects of Electric Current",
+          "Chapter 15: Some Natural Phenomena",
+          "Chapter 16: Light",
+          "Chapter 17: Stars and the Solar System",
+          "Chapter 18: Pollution of Air and Water"
+        ]
+      },
+      {
+        sub: "MCQs for Class 8 Social Science",
+        chapters: [
+          "History Chapter 1: How, When and Where",
+          "History Chapter 2: From Trade to Territory",
+          "History Chapter 3: Ruling the Countryside",
+          "History Chapter 4: Tribals, Dikus, and the Vision of a Golden Age",
+          "History Chapter 5: When People Rebel 1857 and After",
+          "History Chapter 6: Colonialism and the City",
+          "Geography Chapter 1: Resources",
+          "Geography Chapter 2: Land, Soil, Water, Natural Vegetation and Wildlife Resources",
+          "Geography Chapter 3: Mineral and Power Resources",
+          "Civics Chapter 1: The Indian Constitution",
+          "Civics Chapter 2: Understanding Secularism",
+          "Civics Chapter 3: Why Do We Need a Parliament?",
+          "Civics Chapter 4: Understanding Laws",
+          "Civics Chapter 5: Judiciary"
+        ]
+      }
+    ]
+  },  
   {
     title: "MCQs for class 9",
     subjects: [
-      { sub: "MCQs for class 9 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 9 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 9 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
-      { sub: "MCQs for class 9 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
-      { sub: "MCQs for class 9 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
+      {
+        sub: "MCQs for class 9 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 9 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 9 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
+      {
+        sub: "MCQs for class 9 Science",
+        chapters: ["Chapter 1 Science", "Chapter 2 Science"],
+      },
+      {
+        sub: "MCQs for class 9 SSt",
+        chapters: ["Chapter 1 SSt", "Chapter 2 SSt"],
+      },
     ],
   },
   {
     title: "MCQs for class 10",
     subjects: [
-      { sub: "MCQs for class 10 Hindi", chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"] },
-      { sub: "MCQs for class 10 English", chapters: ["Chapter 1 English", "Chapter 2 English"] },
-      { sub: "MCQs for class 10 Math", chapters: ["Chapter 1 Math", "Chapter 2 Math"] },
-      { sub: "MCQs for class 10 Science", chapters: ["Chapter 1 Science", "Chapter 2 Science"] },
-      { sub: "MCQs for class 10 SSt", chapters: ["Chapter 1 SSt", "Chapter 2 SSt"] },
+      {
+        sub: "MCQs for class 10 Hindi",
+        chapters: ["Chapter 1 Hindi", "Chapter 2 Hindi"],
+      },
+      {
+        sub: "MCQs for class 10 English",
+        chapters: ["Chapter 1 English", "Chapter 2 English"],
+      },
+      {
+        sub: "MCQs for class 10 Math",
+        chapters: ["Chapter 1 Math", "Chapter 2 Math"],
+      },
+      {
+        sub: "MCQs for class 10 Science",
+        chapters: ["Chapter 1 Science", "Chapter 2 Science"],
+      },
+      {
+        sub: "MCQs for class 10 SSt",
+        chapters: ["Chapter 1 SSt", "Chapter 2 SSt"],
+      },
     ],
   },
 ];
@@ -474,11 +677,23 @@ function McqListMenu() {
   const handleSubjectToggle = (subject) => {
     setOpenSubject(openSubject === subject ? null : subject); // Toggle the subject's dropdown
     const selectedSubject = mcqItems
-      .find(item => item.title === openClass)
-      .subjects.find(item => item.sub === subject);
+      .find((item) => item.title === openClass)
+      .subjects.find((item) => item.sub === subject);
 
     setChapters(selectedSubject ? selectedSubject.chapters : []); // Set chapters for the selected subject
   };
+
+  const handleSubjectClick = (classTitle, subject, chapter) => {
+    const formattedClass = classTitle
+      .toLowerCase()
+      .replace("mcqs for class ", "")
+      .trim();
+    const formattedSubject = subject
+      .toLowerCase()
+      .replace(/mcqs for class \d+ /, "")
+      .trim();
+    navigate(`/mcqs/${formattedClass}/${formattedSubject}/${chapter}`);
+  }
 
   const renderItems = mcqItems.map(({ title, subjects }) => (
     <li key={title} className="relative group">
@@ -497,7 +712,9 @@ function McqListMenu() {
           <ChevronDownIcon
             strokeWidth={2}
             color="gray"
-            className={`h-3 w-3 transition-transform ${openClass === title ? "rotate-180" : ""}`}
+            className={`h-3 w-3 transition-transform ${
+              openClass === title ? "rotate-180" : ""
+            }`}
           />
         )}
       </a>
@@ -514,10 +731,19 @@ function McqListMenu() {
               </a>
               {/* Render chapters when a subject is selected */}
               {openSubject === sub && (
-                <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-[18rem] mt-0 rounded shadow-lg z-10">
-                  {chapters.map(chapter => (
-                    <li key={chapter} className="px-4 py-2 hover:bg-[#fe4c1c] hover:text-white">
-                      {chapter}
+                <ul className="absolute text-xs left-full top-0 bg-[#510bdb] text-white w-[16rem] mt-0 rounded shadow-lg z-10">
+                  {chapters.map((chapter) => (
+                    <li
+                      key={chapter}
+                      className="px-4 py-2 hover:bg-[#fe4c1c] hover:text-white"
+                    >
+                      <a
+                        href="#"
+                        onClick={() => handleSubjectClick(title, sub, chapter)}
+                        className="block px-2 py-1 hover:bg-[#fe4c1c] hover:text-white"
+                      >
+                        {chapter}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -547,7 +773,9 @@ function McqListMenu() {
         <ChevronDownIcon
           strokeWidth={2}
           color="gray"
-          className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
+          className={`h-3 w-3 transition-transform ${
+            isMenuOpen ? "rotate-180" : ""
+          }`}
         />
       </Typography>
       {isMenuOpen && (
