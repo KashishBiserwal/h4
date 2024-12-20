@@ -936,6 +936,11 @@ const navListItems = [
     icon: UserCircleIcon,
     link: "/tests",
   },
+  {
+    label: "EDUCATIONAL NEWS",
+    icon: UserCircleIcon,
+    link: "/news",
+  },
   // {
   //   label: "TYPING GAME",
   //   icon: CubeTransparentIcon,

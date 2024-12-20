@@ -7,6 +7,7 @@ import Gallery from "./pages/Gallery";
 import NCERTSolutions from "./pages/NCERTSolutions";
 import ExerciseDetails from "./pages/ExerciseDetails";
 import MCQExercises from "./pages/MCQExercises";
+import Newz from "./pages/Newz";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="tests" element={<Tests />}/>
           <Route path="gallery" element={<Gallery />}/>
+          <Route path="news" element={<Newz />}/>
           <Route path="ncert/:className/:subject" element={<NCERTSolutions />}/>
           <Route path="ncert/:className/:subject/:chapter/:exercise" element={<ExerciseDetails />} />
           <Route path="mcqs/:formattedClass/:formattedSubject/:chapter" element={<MCQExercises />} />
