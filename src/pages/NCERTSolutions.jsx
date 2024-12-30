@@ -1,38 +1,30 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
-const chaptersData = {
-  math: [
-    {
-      title: "Chapter 1. Rational Numbers",
-      exercises: ["Exercise 1.1", "Exercise 1.2", "Exercise 1.3"],
-    },
-    {
-      title: "Chapter 2. Linear Equations in One Variable",
-      exercises: ["Exercise 2.1", "Exercise 2.2"],
-    },
-    {
-      title: "Chapter 3. Understanding Quadrilaterals",
-      exercises: ["Exercise 3.1", "Exercise 3.2", "Exercise 3.3"],
-    },
-    {
-      title: "Chapter 4. Data Handling",
-      exercises: ["Exercise 4.1", "Exercise 4.2"],
-    },
-  ],
-  science: [
-    {
-      title: "Chapter 1. Food: Where Does It Come From?",
-      exercises: ["Exercise 1.1", "Exercise 1.2"],
-    },
-  ],
-};
 
 export default function NCERTSolutions() {
   const { className, subject } = useParams();
+  const [data, setData] = useState([]);
   const navigate = useNavigate();
 
-  const chapters = chaptersData[subject?.toLowerCase()] || [];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`https://ambitionstudies-server.vercel.app/ncertClassSubChapters/${className}/${subject}`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        console.log("Data fetched:", response.data);
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [className, subject]);
+
 
   const handleExerciseClick = (chapterTitle, exercise) => {
     const formattedChapter = chapterTitle
@@ -48,6 +40,15 @@ export default function NCERTSolutions() {
       `/ncert/${className}/${subject}/${formattedChapter}/${formattedExercise}`
     );
   };
+
+  const handleChapterClick = (chapterTitle) => {
+    const formattedChapter = chapterTitle
+      .toLowerCase()
+      .replace(/chapter \d+\./, "")
+      .trim()
+      .replace(/\s+/g, "-");
+    navigate(`/ncert/${className}/${subject}/${formattedChapter}`);
+  }
 
   return (
     <div>
@@ -71,27 +72,33 @@ export default function NCERTSolutions() {
           Chapter-wise Class {className} {subject} Solutions
         </h2>
         <ul className="list-disc pl-6">
-          {chapters.map((chapter) => (
-            <li key={chapter.title} className="mb-4 list-none">
-              <h3 className="font-semibold text-md text-[#510bdb]">
-                {chapter.title}
-              </h3>
-              <ul className="list-disc pl-6">
-                {chapter.exercises.map((exercise) => (
-                  <li key={exercise} className="my-1 list-none">
-                    <button
-                      onClick={() =>
-                        handleExerciseClick(chapter.title, exercise)
-                      }
-                      className="text-blue-500 underline hover:text-blue-700"
-                    >
-                      {exercise}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
+          {subject === "math" ? 
+            data?.map((chapter) => (
+              <li key={chapter.chapter} className="mb-4 list-none">
+                <h3 className="font-semibold text-md text-[#510bdb]">
+                  {chapter.chapter}
+                </h3>
+                  <ul className="list-disc pl-6">
+                    <li className="my-1 list-none"> 
+                      <button
+                        onClick={() => handleExerciseClick(chapter.chapter, chapter.exercise)}
+                        className="text-blue-500 underline hover:text-blue-700"
+                      >
+                        {chapter.exercise}
+                      </button>
+                    </li>
+                  </ul>
+              </li>
+            ))
+           : (
+            data?.map((chapter) => (
+              <li key={chapter} className="mb-4 list-none">
+                <h3 className="font-semibold text-md text-[#510bdb]" onClick={() => handleChapterClick(chapter)}>
+                  {chapter}
+                </h3>
+              </li>
+            ))
+          )}
         </ul>
         <p className="text-xs my-8">
           For effective preparation, NCERT Class {className} Math sample papers and CBSE

@@ -8,6 +8,8 @@ import NCERTSolutions from "./pages/NCERTSolutions";
 import ExerciseDetails from "./pages/ExerciseDetails";
 import MCQExercises from "./pages/MCQExercises";
 import Newz from "./pages/Newz";
+import UploadFile from "./pages/UploadFile";
+import ChapterDetails from "./pages/ChapterDetails";
 
 
 function App() {
@@ -20,10 +22,11 @@ function App() {
           <Route path="tests" element={<Tests />}/>
           <Route path="gallery" element={<Gallery />}/>
           <Route path="news" element={<Newz />}/>
+          <Route path="uploadFile" element={<UploadFile />}/>
           <Route path="ncert/:className/:subject" element={<NCERTSolutions />}/>
+          <Route path="ncert/:className/:subject/:chapter" element={<ChapterDetails />} />
           <Route path="ncert/:className/:subject/:chapter/:exercise" element={<ExerciseDetails />} />
           <Route path="mcqs/:formattedClass/:formattedSubject/:chapter" element={<MCQExercises />} />
-
         </Route>
       </Routes>
       </BrowserRouter>

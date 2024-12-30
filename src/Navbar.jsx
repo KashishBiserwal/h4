@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   MobileNav,
@@ -26,6 +26,7 @@ import {
   Bars2Icon,
 } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 // profile menu component
 // const profileMenuItems = [
@@ -939,59 +940,89 @@ const gamesItems = [
 ];
 
 function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [openClass, setOpenClass] = React.useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openClass, setOpenClass] = useState(null);
+  const [ncertSolItems, setNcertSolItems] = useState([]); // State to store the fetched data
   const navigate = useNavigate();
 
-  const handleClassToggle = (classTitle) => {
-    setOpenClass(openClass === classTitle ? null : classTitle);
+  const handleClassToggle = (className) => {
+    setOpenClass(openClass === className ? null : className);
   };
 
-  const handleSubjectClick = (classTitle, subject) => {
-    const formattedClass = classTitle
-      .toLowerCase()
-      .replace("ncert solution for class ", "")
-      .trim();
-    const formattedSubject = subject
-      .toLowerCase()
-      .replace(/ncert solution for class \d+ /, "")
-      .trim();
+  const handleSubjectClick = (className, subject) => {
+    const formattedClass = className.toLowerCase().trim();
+    const formattedSubject = subject.toLowerCase().trim();
     navigate(`/ncert/${formattedClass}/${formattedSubject}`);
   };
 
-  const renderItems = ncertSolItems.map(({ title, subjects }) => (
-    <li key={title} className="relative group">
+  // Fetch data when the component mounts
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://ambitionstudies-server.vercel.app/ncertList", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        // Use the response data directly to populate ncertSolItems
+        setNcertSolItems(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array means this runs only once when the component mounts
+
+  // Sort and structure the items by class and subject
+  const sortedItems = ncertSolItems
+    .reduce((acc, { className, subject }) => {
+      const classItem = acc.find((item) => item.className === className);
+      if (classItem) {
+        if (!classItem.subjects.includes(subject)) {
+          classItem.subjects.push(subject);
+        }
+      } else {
+        acc.push({
+          className,
+          subjects: [subject],
+        });
+      }
+      return acc;
+    }, [])
+    .sort((a, b) => a.className - b.className); // Sort classes by className (numerically)
+
+  const renderItems = sortedItems.map(({ className, subjects }) => (
+    <li key={className} className="relative group">
       <a
         href="#"
         onClick={(e) => {
           e.preventDefault();
-          if (subjects) handleClassToggle(title);
+          handleClassToggle(className);
         }}
         className="flex items-center justify-between hover:bg-[#fe4c1c] hover:text-white p-2 rounded"
       >
         <Typography variant="small" className="mb-1">
-          {title}
+          NCERT Solutions for Class {className}
         </Typography>
-        {subjects && (
-          <ChevronDownIcon
-            strokeWidth={2}
-            color="gray"
-            className={`h-3 w-3 transition-transform ${
-              openClass === title ? "rotate-180" : ""
-            }`}
-          />
-        )}
+        <ChevronDownIcon
+          strokeWidth={2}
+          color="gray"
+          className={`h-3 w-3 transition-transform ${
+            openClass === className ? "rotate-180" : ""
+          }`}
+        />
       </a>
-      {subjects && openClass === title && (
+      {openClass === className && (
         <ul className="absolute left-full top-0 bg-[#510bdb] text-white w-[18rem] mt-0 rounded shadow-lg z-10">
           {subjects.map((subject) => (
             <li key={subject}>
               <a
                 href="#"
-                onClick={() => handleSubjectClick(title, subject)}
+                onClick={() => handleSubjectClick(className, subject)}
                 className="block px-4 py-2 hover:bg-[#fe4c1c] hover:text-white"
               >
-                {subject}
+                NCERT Solutions for Class {className} {subject}
               </a>
             </li>
           ))}
@@ -1022,14 +1053,13 @@ function NavListMenu() {
         />
       </Typography>
       {isMenuOpen && (
-        <ul className="absolute w-[18rem] bg-[#510bdb] text-white rounded shadow-lg z-20 mt-1 text-sm">
+        <ul className="absolute w-[18rem] bg-[#510bdb] text-white rounded shadow-lg z-20 mt-0 text-sm">
           {renderItems}
         </ul>
       )}
     </div>
   );
 }
-
 function McqListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [openClass, setOpenClass] = React.useState(null);

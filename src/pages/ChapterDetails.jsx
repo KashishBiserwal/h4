@@ -4,17 +4,22 @@ import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import axios from "axios";
 
-export default function ExerciseDetails() {
-  const { className, subject, chapter, exercise } = useParams();
+export default function ChapterDetails() {
+  const { className, subject, chapter } = useParams();
   const [pdfPath, setPdfPath] = React.useState("");
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://ambitionstudies-server.vercel.app/pdfs/ncert/${className}/${subject.charAt(0).toUpperCase() + subject.slice(1)}/${chapter.charAt(0).toUpperCase() + chapter.slice(1)}/${exercise}`, {
-          headers: {
-            "Content-Type": "application/json",
+        const response = await axios.get(
+          `https://ambitionstudies-server.vercel.app/pdfs/ncert/${className}/${
+            subject.charAt(0).toUpperCase() + subject.slice(1)
+          }/${chapter.charAt(0).toUpperCase() + chapter.slice(1)}`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
-        });
+        );
         setPdfPath(response.data.url);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -22,7 +27,7 @@ export default function ExerciseDetails() {
     };
 
     fetchData();
-  }, [className, subject, chapter, exercise]);
+  }, [className, subject]);
 
   const base64toBlob = (data) => {
     // Cut the prefix `data:application/pdf;base64` from the raw base 64
@@ -47,15 +52,13 @@ export default function ExerciseDetails() {
   return (
     <div className="w-full h-screen">
       <h1 className="text-center font-bold text-xl mb-4 mt-4">
-        NCERT {subject} - Class {className}, {chapter}, {exercise}
+        NCERT {subject} - Class {className}, {chapter}
       </h1>
       <div className="pdf-container border rounded shadow-md h-[80vh] overflow-y-auto">
-        {url ? 
-       <Worker 
+       {url ? <Worker 
             workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
           <Viewer fileUrl={url} />
-        </Worker>
-        : "Loading..."}
+        </Worker> : "Loading..."}
       </div>
     </div>
   );
