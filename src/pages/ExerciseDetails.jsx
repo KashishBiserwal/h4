@@ -10,7 +10,7 @@ export default function ExerciseDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://ambitionstudies-server.vercel.app/pdfs/ncert/${className}/${subject.charAt(0).toUpperCase() + subject.slice(1)}/${chapter.charAt(0).toUpperCase() + chapter.slice(1)}/${exercise}`, {
+        const response = await axios.get(`https://ambitionstudies-server.vercel.app/pdfs/ncert/${className}/${subject.replace(/-/g, " ")}/${chapter.replace(/-/g, " ")}/${exercise}`, {
           headers: {
             "Content-Type": "application/json",
           }

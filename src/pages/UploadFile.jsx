@@ -31,12 +31,11 @@ export default function UploadFile() {
 
     try {
       const base64File = await getBase64(file);
-      const formattedChapter = chapter.replace(" ", "-");
 
       const formData = {
         className,
-        subject,
-        chapter: formattedChapter,
+        subject: subject.toLowerCase(),
+        chapter: chapter.toLowerCase(),
         exercise,
         type,
         url: base64File, 
@@ -55,11 +54,6 @@ export default function UploadFile() {
       if(response.data.status === 'success') {
         setLoading(false);
         alert("File uploaded successfully!");
-        // setClassName("");
-        // setSubject("");
-        // setChapter("");
-        // setFile(null);
-        // setType("ncert");
       }else {
         setLoading(false);
         alert("Error uploading file.");
@@ -89,7 +83,7 @@ export default function UploadFile() {
             required
             className="text-black"
           >
-            <option value="#" disabled>Select Class</option>
+            <option value="#">Select Class</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -110,7 +104,7 @@ export default function UploadFile() {
             required
             className="text-black"
           >
-            <option value="#" disabled>Select Subject</option>
+            <option value="#">Select Subject</option>
             <option value="English">English</option>
             <option value="Hindi">Hindi</option>
             <option value="Math">Math</option>

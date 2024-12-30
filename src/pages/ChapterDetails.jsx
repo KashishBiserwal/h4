@@ -12,8 +12,8 @@ export default function ChapterDetails() {
       try {
         const response = await axios.get(
           `https://ambitionstudies-server.vercel.app/pdfs/ncert/${className}/${
-            subject.charAt(0).toUpperCase() + subject.slice(1)
-          }/${chapter.charAt(0).toUpperCase() + chapter.slice(1)}`,
+            subject.replace(/-/g, " ")
+          }/${chapter.replace(/-/g, " ")}`,
           {
             headers: {
               "Content-Type": "application/json",
