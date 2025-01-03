@@ -10,6 +10,9 @@ import MCQExercises from "./pages/MCQExercises";
 import Newz from "./pages/Newz";
 import UploadFile from "./pages/UploadFile";
 import ChapterDetails from "./pages/ChapterDetails";
+import UploadNews from "./pages/uploadNews";
+import Login from "./pages/Login";
+import AdminPdfList from "./pages/AdminPdfList";
 
 
 function App() {
@@ -19,10 +22,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="login" element={<Login />}/>
           <Route path="tests" element={<Tests />}/>
           <Route path="gallery" element={<Gallery />}/>
           <Route path="news" element={<Newz />}/>
           <Route path="uploadFile" element={<UploadFile />}/>
+          <Route path="addNews" element={<UploadNews />}/>
+          <Route path="managePdfs" element={<AdminPdfList />}/>
           <Route path="ncert/:className/:subject" element={<NCERTSolutions />}/>
           <Route path="ncert/:className/:subject/:chapter" element={<ChapterDetails />} />
           <Route path="ncert/:className/:subject/:chapter/:exercise" element={<ExerciseDetails />} />

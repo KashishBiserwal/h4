@@ -27,6 +27,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Cookies from 'js-cookie';
 
 // profile menu component
 // const profileMenuItems = [
@@ -939,6 +940,66 @@ const gamesItems = [
   },
 ];
 
+const adminListItems = [
+  {
+    title: "ADD FILE",
+    link: "/uploadFile",
+  },
+  {
+    title: "ADD NEWS",
+    link: "/addNews",
+  },
+  {
+    title: "MANAGE PDFS",
+    link: "/managePdfs",
+  },
+]
+
+function AdminMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  function handleLogout(){
+    Cookies.remove("token");
+    window.location.reload();
+  }
+
+  const renderItems = adminListItems.map(({ title, link }) => (
+    <a href={link} key={title}>
+      <MenuItem className="hover:bg-[#fe4c1c] hover:text-white">
+        <Typography variant="small" className="mb-1">
+          {title}
+        </Typography>
+      </MenuItem>
+    </a>
+  ));
+
+  return (
+    <React.Fragment>
+      <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
+        <MenuHandler>
+          <Typography as="a" href="#" variant="small" className="font-normal">
+            <MenuItem className="hidden text-xs items-center gap-2 font-semibold hover:bg-[#510bdb] hover:text-white lg:flex lg:rounded-full">
+              ADMIN{" "}
+              <ChevronDownIcon
+                strokeWidth={2}
+                color="gray"
+                className={`h-3 w-3 transition-transform ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </MenuItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden w-[18rem] overflow-visible lg:grid">
+          <ul className="flex w-full flex-col gap-1 bg-[#510bdb] text-white">
+            {renderItems}
+          </ul>
+          <button className="bg-blue-500 text-white rounded-full p-2 mt-2" onClick={() => handleLogout()}>Logout</button>
+        </MenuList>
+      </Menu>
+    </React.Fragment>
+  );
+}
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openClass, setOpenClass] = useState(null);
@@ -1185,7 +1246,6 @@ function McqListMenu() {
     </div>
   );
 }
-
 function CourseMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -1280,7 +1340,6 @@ function BooksMenu() {
     </React.Fragment>
   );
 }
-
 function GamesMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -1370,6 +1429,7 @@ const navListItems = [
 ];
 
 function NavList() {
+  const token = Cookies.get("token");
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <McqListMenu />
@@ -1394,6 +1454,7 @@ function NavList() {
           <GamesMenu /> */}
         </Typography>
       ))}
+      {token && <AdminMenu />}
     </ul>
   );
 }
