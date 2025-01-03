@@ -15,7 +15,7 @@ export default function Login() {
             alert("Both username and password are required!")
         }
         const response = await axios.post(
-            "http://localhost:5000/login",
+            "https://ambitionstudies-server.vercel.app/login",
             {
                 username, password
             },

@@ -24,7 +24,7 @@ export default function UploadNews() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/addNews",
+        "https://ambitionstudies-server.vercel.app/addNews",
         formData,
         {
           headers: {
@@ -50,7 +50,7 @@ export default function UploadNews() {
 
   useEffect(() => {
     async function fetchNews(){
-        const res = await axios.get('http://localhost:5000/getNews', {
+        const res = await axios.get('https://ambitionstudies-server.vercel.app/getNews', {
             headers: {
               "Content-Type": "application/json",
             },
@@ -62,7 +62,7 @@ export default function UploadNews() {
   }, []);
 
   async function handleDelete(id){
-    const res = await axios.delete(`http://localhost:5000/news/${id}`, {
+    const res = await axios.delete(`https://ambitionstudies-server.vercel.app/news/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },

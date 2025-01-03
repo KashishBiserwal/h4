@@ -8,7 +8,7 @@ export default function Newz() {
   useEffect(() => {
     async function fetchNews(){
       setLoading(true)
-        const res = await axios.get('http://localhost:5000/getNews', {
+        const res = await axios.get('https://ambitionstudies-server.vercel.app/getNews', {
             headers: {
               "Content-Type": "application/json",
             },

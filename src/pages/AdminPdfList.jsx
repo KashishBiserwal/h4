@@ -9,7 +9,7 @@ export default function AdminPdfList() {
   useEffect(() => {
     async function fetchPdfData() {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/pdfs", {
+      const res = await axios.get("https://ambitionstudies-server.vercel.app/pdfs", {
         headers: {
           "Content-Type": "application/json",
         },
